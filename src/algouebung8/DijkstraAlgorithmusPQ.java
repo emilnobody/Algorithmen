@@ -129,7 +129,7 @@ public class DijkstraAlgorithmusPQ {
     /**
      * Assume: all Verticies are unvisited . this methode initialize all
      * verticies from the graph with infinity and the startinpoint with weight 0
-     *
+     * also set the predecessor to nullS
      * @param graph
      * @param startpoint
      */
