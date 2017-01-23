@@ -130,6 +130,7 @@ public class DijkstraAlgorithmusPQ {
      * Assume: all Verticies are unvisited . this methode initialize all
      * verticies from the graph with infinity and the startinpoint with weight 0
      * also set the predecessor to nullS
+     *
      * @param graph
      * @param startpoint
      */
@@ -260,13 +261,18 @@ public class DijkstraAlgorithmusPQ {
         System.out.println("so ergibt sie Sich:");
 
         System.out.println(path);
-        System.out.println(startpoint);
+        System.out.print(startpoint);
         String pathfromVertex;
         for (VertexDist vertexPath : path) {
-            pathfromVertex = vertexPath.toString();
 
-            System.out.println(pathfromVertex);
+            pathfromVertex = "->" + vertexPath.toString();
+//            if (vertexPath.getPrevVertex().getId() == target.getId()) {
+//                System.out.print(pathfromVertex+"\n");
+//            }
+            System.out.print(pathfromVertex);
         }
+            System.out.print("\n");
+            System.out.print("\n");
         return path;
     }
 }

@@ -106,8 +106,9 @@ public class Main {
             System.out.println("\n");
         } catch (NegativeEdgeException ex) {
             ex.getMessage();
-            System.out.println(ex);
-            System.err.printf("" + ex.getMessage()+""+ "\n");
+            System.err.printf("AHTUNG!!!"+ "\n");
+            System.out.print(ex);
+            System.err.printf("" + ex+""+ "\n");
         }
     }
        
