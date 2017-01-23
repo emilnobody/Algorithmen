@@ -4,7 +4,6 @@
  * and open the template in the editor.
  */
 package algouebung8;
-
 import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
