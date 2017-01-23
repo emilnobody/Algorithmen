@@ -17,7 +17,9 @@ import java.util.logging.Logger;
 
 /**
  * this class realize the DijsktraAlgorithmus with a PiorityQueue/ PQ. the PQ
- * sorte the Vertecie, with priority sorted by weight acsending
+ * sorte the Vertecie, with priority sorted by weight acsending thisclass is for
+ * solving the single-source shortest paths problem in edge-weighted directed
+ * graph where the edge weights are nonnegative.
  *
  * @author emil
  */
@@ -58,8 +60,8 @@ public class DijkstraAlgorithmusPQ {
     private PriorityQueue weight = new PriorityQueue<VertexDist>(7, shortestDistanceComparator);
 
     /**
-     * The Constructor for the Algorithem if edges get a negative value it
-     * throws an NegativeEdgeException
+     * Assume: all edges ara nonnegative. The Constructor for the Algorithem if
+     * edges get a negative value it throws an NegativeEdgeException
      *
      * @param graph
      * @param weight
@@ -184,7 +186,9 @@ public class DijkstraAlgorithmusPQ {
     }
 
     /**
-     * A methode that initialize
+     * Assume:anonnegative egdes else throws NegativeEdgeException. A methode
+     * that initialize Step by step the vertex u from V-S with minimum
+     * distancevalue is taken and all edges(u,v) incident to u are relaxed
      *
      * @param vertexU
      * @throws algouebung8.NegativeEdgeException
@@ -210,7 +214,9 @@ public class DijkstraAlgorithmusPQ {
     }
 
     /**
-     * this methode execute the Algorithem
+     *
+     * this methode execute the Algorithem stops the algorithem if negative edge
+     * is found !
      *
      * @throws algouebung8.NegativeEdgeException
      */
@@ -228,9 +234,8 @@ public class DijkstraAlgorithmusPQ {
     }
 
     /**
-     * Assume target is visited an has predessecor.
-     * This method returns the path from the source to the selected target and
-     * NULL if no path exists
+     * Assume target is visited an has predessecor. This method returns the path
+     * from the source to the selected target and NULL if no path exists
      *
      * @param target
      * @return
@@ -253,7 +258,7 @@ public class DijkstraAlgorithmusPQ {
         System.out.println("Das ist der Zielvertex!!" + target);
         System.out.println("Das die DIstance!!" + target.getDistance());
         System.out.println("so ergibt sie Sich:");
-        
+
         System.out.println(path);
         System.out.println(startpoint);
         String pathfromVertex;
